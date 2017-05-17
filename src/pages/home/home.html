@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>OWASP</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Escolha um Exemplo
+    </ion-list-header>
+    <button ion-item *ngFor="let activity of activities" (click)="openActivity(activity.page)">{{activity.name}}</button>
+  </ion-list>
+</ion-content>
