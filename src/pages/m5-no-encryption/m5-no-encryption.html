@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Criptografia Inadequada</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item-group>
+    <ion-item-divider color="light">Registro Simples com Dados Sensíveis</ion-item-divider>
+
+    <ion-item>
+      <ion-label color="primary" stacked>E-mail</ion-label>
+      <ion-input [(ngModel)]="email" type="email" placeholder="Insira o E-mail"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Senha (sensível)</ion-label>
+      <ion-input [(ngModel)]="password" type="password" placeholder="Insira a Senha"></ion-input>
+    </ion-item>
+
+  </ion-item-group>
+
+  <br>
+  <button ion-button block (click)="sigin()">Registrar</button>
+
+  <!-- Explicações -->
+  <h4>
+    <ion-icon name="ios-bug" item-left></ion-icon> Evitar</h4>
+  <p>
+    Não criptografar dados sensíveis como Senha, CPF entre outros. Salvar credenciais 
+    ou qualquer dado que seja de extrema importância. Utilizar algoritmos RC2, MD4, MD5 ou SH1.
+  </p>
+
+  <br>
+  <h4>
+    <ion-icon name="ios-happy" item-left></ion-icon> Recomendado</h4>
+  <p>
+    Usar criptografia em dados sensíveis. SHA-256 é uma boa escolha. Desativar registro 
+    de teclas por campo.
+  </p>
+</ion-content>

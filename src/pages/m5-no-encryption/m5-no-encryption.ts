@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+import SHA_256 from 'sha256/lib/nodecrypto';
 
 //Native Storage
 import { NativeStorage } from '@ionic-native/native-storage';
 
-
 @Component({
-  selector: 'page-m2-unsafe-data',
-  templateUrl: 'm2-unsafe-data.html',
+  selector: 'page-m5-no-encryption',
+  templateUrl: 'm5-no-encryption.html',
 })
-export class M2UnsafeDataPage {
+export class M5NoEncryptionPage {
 
   public email: string;
   public password: string;
-  private readEmail: String = 'Deve Rodar num Device/Simulador';
+  private readPass: String;
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController, private nativeStorage: NativeStorage) { }
 
@@ -23,15 +23,18 @@ export class M2UnsafeDataPage {
    */
   public sigin(): void {
 
+    //Criptografa
+    this.readPass = SHA_256(this.password).toString();
+
     this.nativeStorage.setItem('userData', { email: this.email, password: this.password })
       .then(
       () => console.log('Item Salvo!'),
-      error => {console.error('Erro ao salvar item', error); this.showAlert(this.readEmail);}
+      error => { console.error('Erro ao salvar item', error); this.showAlert(this.readPass); }
       );
 
     this.nativeStorage.getItem('userData')
       .then(
-      data => { this.readEmail = data.email; this.showAlert(this.readEmail); },
+      data => { this.readPass = data.password; this.showAlert(this.readPass); },
       error => { console.error('Erro ao ler dados'); }
       );
   }
@@ -40,11 +43,12 @@ export class M2UnsafeDataPage {
 
     let alert = this.alertCtrl.create({
       title: 'Dados Salvos e Lidos',
-      subTitle: 'Nome: ' + alertText,
+      subTitle: 'Senha Criptografada: ' + alertText,
       buttons: ['OK']
     });
     alert.present();
   }
+
 
 
   /**
@@ -52,9 +56,8 @@ export class M2UnsafeDataPage {
    */
   /*public sign(): void {
      localStorage.setItem('email', this.email);
-     localStorage.setItem('password', this.password);
+     localStorage.setItem('password', this.password); //Deixa aberto
   }*/
-
 
 
 }

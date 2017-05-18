@@ -9,9 +9,11 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 import { M1LatestReleasesPage } from '../pages/m1-latest-releases/m1-latest-releases';
 import { M2UnsafeDataPage } from "../pages/m2-unsafe-data/m2-unsafe-data";
+import { M5NoEncryptionPage } from "../pages/m5-no-encryption/m5-no-encryption";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { M2UnsafeDataPage } from "../pages/m2-unsafe-data/m2-unsafe-data";
     HomePage,
     TabsPage,
     M1LatestReleasesPage,
-    M2UnsafeDataPage
+    M2UnsafeDataPage,
+    M5NoEncryptionPage
   ],
   imports: [
     BrowserModule,
@@ -33,11 +36,13 @@ import { M2UnsafeDataPage } from "../pages/m2-unsafe-data/m2-unsafe-data";
     HomePage,
     TabsPage,
     M1LatestReleasesPage,
-    M2UnsafeDataPage
+    M2UnsafeDataPage,
+    M5NoEncryptionPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    NativeStorage,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
