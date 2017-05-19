@@ -10,9 +10,6 @@ possuem a classe principal contento o *código seguro* e o *código inseguro com
 Eles estão separados pelos comentários *Recomendado* e *Não Recomendado*. 
 Esta aplicação usa sempre a classe segura. As classes e toda a aplicação podem ser acessadas no github.
 
-Os exemplos de uso tem como padrão no nome as iniciais do tópico a que ela representa contextualmente. 
-Por exemplo: *M1 - Nome do Exemplo*. Onde "M1" é o contexto do exemplo.
-
 Observação 1: Os exemplos podem abordar mais de um caso num mesmo tópico. 
 Pode ser que não tenha exemplos de alguns tópicos.
 
