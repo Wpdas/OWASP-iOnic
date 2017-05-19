@@ -5,8 +5,9 @@ Este é um projeto desenvolvido em [Ionic](http://ionicframework.com/).
 Este é um projeto que visa utilizar práticas de segurança no desenvolvimento de uma aplicação. 
 Os exemplos abordados são baseados no OWASP.
 
-Todos os exemplos (exceto o "M1 - Recursos Atualizados" por ser a própria a plicação) 
-possuem duas classes. Uma com práticas de segurança aplicada e outra sem. 
+Todos os exemplos (exceto os casos que não precisam de código) 
+possuem a classe principal contento o *código seguro* e o *código inseguro comentado*.
+Eles estão separados pelos comentários *Recomendado* e *Não Recomendado*. 
 Esta aplicação usa sempre a classe segura. As classes e toda a aplicação podem ser acessadas no github.
 
 Os exemplos de uso tem como padrão no nome as iniciais do tópico a que ela representa contextualmente. 
