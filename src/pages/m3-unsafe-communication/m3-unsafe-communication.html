@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Comunicação Insegura (SSL)</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item-group>
+    <ion-item-divider color="light">Solicitação de Serviço API (HTTPS somente)</ion-item-divider>
+    <ion-item>Tipo HTTPS: {{returnData}}</ion-item>
+  </ion-item-group>
+
+  <br>
+
+  <!-- Explicações -->
+  <h4>
+    <ion-icon name="ios-bug" item-left></ion-icon> Evitar</h4>
+  <p>
+    Usar conexão que não seja ponta a ponta e criptografada (HTTP).
+  </p>
+
+  <br>
+  <h4>
+    <ion-icon name="ios-happy" item-left></ion-icon> Recomendado</h4>
+  <p>
+    Usar conexão segura ponta a ponta e com criptografia (Certificado SSL), o que garante 
+    a segurança na comunicação com protocolo HTTPS.
+  </p>
+</ion-content>

@@ -1,0 +1,29 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Autorização Insegura</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h4> <ion-icon name="ios-bug" item-left></ion-icon> Evitar</h4>
+  <p>
+    Deixar uma API com dados sensíveis sem fluxo de autorização. Usar Sessão para login de sites/applicações.
+    Applicação ou sites podem cometer o erro de permitir autorizações inseguras de usuários. Os exemplos 
+    são muitos e vão de sites até APIs totalmente expostas. O uso de sessão (Session) não é muito Recomendado
+    quando o quesito é segurança, porém ainda existem aqueles que se salvam.
+  </p>
+
+  <br>
+  <h4> <ion-icon name="ios-happy" item-left></ion-icon> Recomendado</h4>
+  <p>
+    Uma excelente prática de segurança seria usar tecnologias como OAuth v1, OAuth v2. Existe uma plataforma que 
+    pode gerenciar tudo, se trata do OAuth0.com.
+
+    A tecnlogia OAuth garante que somente usuários que recebam uma chave (token), tenham acesso à aplicação. 
+    Essa chave só é gerada após o usuário ser validado (aprovado). Se trata de um token único para cada acesso.
+  </p>
+</ion-content>

@@ -1,0 +1,61 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>SQL Injection</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item-group>
+    <ion-item-divider color="light">Lista de Itens</ion-item-divider>
+
+    <ion-list *ngIf="productsReady">
+      <ion-item *ngFor='let item of products'>
+        <ion-icon name="ios-basket" item-left></ion-icon>
+        <h2>{{item.description}}</h2>
+        <p>{{item.price}}</p>
+      </ion-item>
+    </ion-list>
+
+  </ion-item-group>
+
+  <br>
+
+  <ion-item-group>
+    <ion-item-divider color="light">Cadastro de Produtos</ion-item-divider>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Produto</ion-label>
+      <ion-input [(ngModel)]="product" type="text" placeholder="Nome do Produto"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Valor</ion-label>
+      <ion-input [(ngModel)]="price" type="number" placeholder="Valor R$"></ion-input>
+    </ion-item>
+
+  </ion-item-group>
+
+  <br>
+  <button ion-button block (click)="addProduct()">Cadastrar Produto</button> <br><br>
+
+  <!-- Explicações -->
+  <h4>
+    <ion-icon name="ios-bug" item-left></ion-icon> Evitar</h4>
+  <p>
+    Usar concatenação simples numa execução SQL. Ao fazer isso, o resultado de uma verificação WHERE por exemplo, sempre vai
+    retornar true caso o usuário informe uma injeção como <em>"or""="</em>. O usuário mal intencionado pode inclusive,
+    em determinado casos, apagar uma tabela ao passar um comando de DROP TABLE.
+  </p>
+
+  <br>
+  <h4>
+    <ion-icon name="ios-happy" item-left></ion-icon> Recomendado</h4>
+  <p>
+    Usar recursos seguros para informar valores. Por exemplo:
+    <em>dataBase.executeSql('INSERT INTO tabela VALUES (?,?)', ['valor', 'valor'])</em>.
+  </p>
+</ion-content>
