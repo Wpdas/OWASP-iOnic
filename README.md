@@ -28,9 +28,10 @@ numa aplicação instalada em um dispositivo iOS, Android ou Windows Phone.
 | Criptografia Inadequada | [Abrir Código](https://github.com/Wpdas/SecurityOWASP/blob/master/src/pages/m5-no-encryption/m5-no-encryption.ts). |
 | SQL Injection (Simulador/Device) | [Abrir Código](https://github.com/Wpdas/SecurityOWASP/blob/master/src/pages/m5-sql-injection/m5-sql-injection.ts). |
 | Funcionalidade Estranha | [Abrir Código](https://github.com/Wpdas/SecurityOWASP/blob/master/src/pages/m10-extraneous-functionality/m10-extraneous-functionality.ts). |
+| Qualidade de Código (Classes de Teste) | [Abrir Caso de Testes](https://github.com/Wpdas/JMeter-Node-using-TDD/tree/master/test). |
 | Recursos Desatualizados | [Abrir Prevenção - Print](https://github.com/Wpdas/SecurityOWASP/blob/master/screenshots/RecursosDesatualizados.png). |
 | Autorização Insegura | [Abrir Prevenção - Print](https://github.com/Wpdas/SecurityOWASP/blob/master/screenshots/AutorizacaoInsegura.png). |
-| Qualidade de Código | [Abrir Prevenção - Print](https://github.com/Wpdas/SecurityOWASP/blob/master/screenshots/QualidadeCodigo.png). |
+| Qualidade de Código (Prevenção) | [Abrir Prevenção - Print](https://github.com/Wpdas/SecurityOWASP/blob/master/screenshots/QualidadeCodigo.png). |
 | Alteração de Código | [Abrir Prevenção - Print](https://github.com/Wpdas/SecurityOWASP/blob/master/screenshots/AlteracaoCodigo.png). |
 | Funcionalidade Externa | [Abrir Prevenção - Print](https://github.com/Wpdas/SecurityOWASP/blob/master/screenshots/FuncionalidadeExterna.png). |
 
