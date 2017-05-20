@@ -16,13 +16,21 @@ Pode ser que não tenha exemplos de alguns tópicos.
 Observação 2: Alguns exemplos só funcionam quando o código está implementando 
 numa aplicação instalada em um dispositivo iOS, Android ou Windows Phone.
 
-#### Códigos (Somente dos que tiveram exemplos na aplicação):
+#### Lista de Códigos e Prevenções:
 | Exemplo no App | Código (TS) |
 | --- | --- |
-| Dados Inseguros (Simulador/Device) | [m2-unsafe-data.ts](https://github.com/Wpdas/SecurityOWASP/blob/master/src/pages/m2-unsafe-data/m2-unsafe-data.ts). |
-| Comunicação Insegura (SSL) | [m3-unsafe-communication.ts](https://github.com/Wpdas/SecurityOWASP/blob/master/src/pages/m3-unsafe-communication/m3-unsafe-communication.ts). |
-| Criptografia Inadequada | [m5-no-encryption.ts](https://github.com/Wpdas/SecurityOWASP/blob/master/src/pages/m5-no-encryption/m5-no-encryption.ts). |
-| SQL Injection (Simulador/Device) | [m5-sql-injection.ts](https://github.com/Wpdas/SecurityOWASP/blob/master/src/pages/m5-sql-injection/m5-sql-injection.ts). |
-| Funcionalidade Estranha | [m10-extraneous-functionality.ts](https://github.com/Wpdas/SecurityOWASP/blob/master/src/pages/m10-extraneous-functionality/m10-extraneous-functionality.ts). |
+| Dados Inseguros (Simulador/Device) | [Abrir Código](https://github.com/Wpdas/SecurityOWASP/blob/master/src/pages/m2-unsafe-data/m2-unsafe-data.ts). |
+| Comunicação Insegura (SSL) | [Abrir Código](https://github.com/Wpdas/SecurityOWASP/blob/master/src/pages/m3-unsafe-communication/m3-unsafe-communication.ts). |
+| Criptografia Inadequada | [Abrir Código](https://github.com/Wpdas/SecurityOWASP/blob/master/src/pages/m5-no-encryption/m5-no-encryption.ts). |
+| SQL Injection (Simulador/Device) | [Abrir Código](https://github.com/Wpdas/SecurityOWASP/blob/master/src/pages/m5-sql-injection/m5-sql-injection.ts). |
+| Funcionalidade Estranha | [Abrir Código](https://github.com/Wpdas/SecurityOWASP/blob/master/src/pages/m10-extraneous-functionality/m10-extraneous-functionality.ts). |
+| Recursos Desatualizados | [Abrir Prevenção - Print](https://github.com/Wpdas/SecurityOWASP/blob/master/screenshots/RecursosDesatualizados.png). |
+| Autorização Insegura | [Abrir Prevenção - Print](https://github.com/Wpdas/SecurityOWASP/blob/master/screenshots/AutorizacaoInsegura.png). |
+| Qualidade de Código | [Abrir Prevenção - Print](https://github.com/Wpdas/SecurityOWASP/blob/master/screenshots/QualidadeCodigo.png). |
+| Alteração de Código | [Abrir Prevenção - Print](https://github.com/Wpdas/SecurityOWASP/blob/master/screenshots/AlteracaoCodigo.png). |
+| Funcionalidade Externa | [Abrir Prevenção - Print](https://github.com/Wpdas/SecurityOWASP/blob/master/screenshots/FuncionalidadeExterna.png). |
 
 Observação: Todo código do projeto pode ser explorado.
+
+#### Aplicativo:
+O aplicativo pode ser baixado pelo link interno do Git: [OWASP.apk](https://github.com/Wpdas/SecurityOWASP/blob/master/OWASP.apk).
