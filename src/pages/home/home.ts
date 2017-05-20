@@ -8,6 +8,8 @@ import { M3UnsafeCommunicationPage } from "../m3-unsafe-communication/m3-unsafe-
 import { M6UnsafeAuthPage } from "../m6-unsafe-auth/m6-unsafe-auth";
 import { M7CodeQualityPage } from "../m7-code-quality/m7-code-quality";
 import { M8ChangeCodePage } from "../m8-change-code/m8-change-code";
+import { M10ExtraneousFunctionalityPage } from "../m10-extraneous-functionality/m10-extraneous-functionality";
+import { M10ExternalFunctionalityPage } from "../m10-external-functionality/m10-external-functionality";
 
 @Component({
   selector: 'page-home',
@@ -27,7 +29,9 @@ export class HomePage {
       { name: "SQL Injection (Simulador/Device)", page: M5SqlInjectionPage }, //M5
       { name: "Autorização Insegura", page: M6UnsafeAuthPage }, //M6
       { name: "Qualidade de Código", page: M7CodeQualityPage }, //M7
-      { name: "Alteração de Código", page: M8ChangeCodePage } //M8
+      { name: "Alteração de Código", page: M8ChangeCodePage }, //M8
+      { name: "Funcionalidade Estranha", page: M10ExtraneousFunctionalityPage }, //M10
+      { name: "Funcionalidade Externa", page: M10ExternalFunctionalityPage } //M10
     ];
   }
 

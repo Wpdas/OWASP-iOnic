@@ -13,6 +13,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NativeStorage } from '@ionic-native/native-storage';
 
+import { SimulatedToken } from "../services/simulated_token/simulated-token.service";
+import { UtilsApp } from "../services/utils/utils.service";
+
 import { M1LatestReleasesPage } from '../pages/m1-latest-releases/m1-latest-releases';
 import { M2UnsafeDataPage } from "../pages/m2-unsafe-data/m2-unsafe-data";
 import { M5NoEncryptionPage } from "../pages/m5-no-encryption/m5-no-encryption";
@@ -21,6 +24,8 @@ import { M3UnsafeCommunicationPage } from "../pages/m3-unsafe-communication/m3-u
 import { M6UnsafeAuthPage } from "../pages/m6-unsafe-auth/m6-unsafe-auth";
 import { M7CodeQualityPage } from "../pages/m7-code-quality/m7-code-quality";
 import { M8ChangeCodePage } from "../pages/m8-change-code/m8-change-code";
+import { M10ExtraneousFunctionalityPage } from "../pages/m10-extraneous-functionality/m10-extraneous-functionality";
+import { M10ExternalFunctionalityPage } from "../pages/m10-external-functionality/m10-external-functionality";
 
 @NgModule({
   declarations: [
@@ -35,7 +40,9 @@ import { M8ChangeCodePage } from "../pages/m8-change-code/m8-change-code";
     M3UnsafeCommunicationPage,
     M6UnsafeAuthPage,
     M7CodeQualityPage,
-    M8ChangeCodePage
+    M8ChangeCodePage,
+    M10ExtraneousFunctionalityPage,
+    M10ExternalFunctionalityPage
   ],
   imports: [
     BrowserModule,
@@ -55,13 +62,17 @@ import { M8ChangeCodePage } from "../pages/m8-change-code/m8-change-code";
     M3UnsafeCommunicationPage,
     M6UnsafeAuthPage,
     M7CodeQualityPage,
-    M8ChangeCodePage
+    M8ChangeCodePage,
+    M10ExtraneousFunctionalityPage,
+    M10ExternalFunctionalityPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     NativeStorage,
     SQLite,
+    SimulatedToken,
+    UtilsApp,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

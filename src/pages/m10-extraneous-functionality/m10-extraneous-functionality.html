@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Funcionalidade Estranha</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item-group>
+    <ion-item-divider color="light">Solicitação de Conexão - Token</ion-item-divider>
+    <ion-item>Status de login/conexão: {{connectedStatus}}</ion-item>
+  </ion-item-group>
+
+  <br>
+
+  <!-- Explicações -->
+  <h4>
+    <ion-icon name="ios-bug" item-left></ion-icon> Evitar</h4>
+  <p>
+    Esquecer algum código de teste contendo dados de token para acesso a alguma aplicação. Usar 
+    token exposto em algum código para acesso a alguma aplicação.
+  </p>
+
+  <br>
+  <h4>
+    <ion-icon name="ios-happy" item-left></ion-icon> Recomendado</h4>
+  <p>
+    É recomendado sempre puxar os dados do token de um serviço API. O mesmo deve ser gerado 
+    no servidor e enviado para o cliente que posteriormente irá utiliza-lo para acesso a algum serviço.
+  </p>
+</ion-content>
