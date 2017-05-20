@@ -57,7 +57,7 @@ export class M5SqlInjectionPage {
   public getData() {
 
     //Limpa produtos
-    this.productsReady = false;
+    //this.productsReady = false;
     this.products = new Array();
 
 

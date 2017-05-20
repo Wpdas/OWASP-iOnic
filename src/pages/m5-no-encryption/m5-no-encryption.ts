@@ -3,8 +3,8 @@ import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import SHA_256 from 'sha256/lib/nodecrypto';
 
-//Native Storage
-import { NativeStorage } from '@ionic-native/native-storage';
+//Secure Storage
+import { SecureStorage, SecureStorageObject } from '@ionic-native/secure-storage';
 
 @Component({
   selector: 'page-m5-no-encryption',
@@ -14,9 +14,11 @@ export class M5NoEncryptionPage {
 
   public email: string;
   public password: string;
-  private readPass: String;
+  private readPass: string;
 
-  constructor(public navCtrl: NavController, private alertCtrl: AlertController, private nativeStorage: NativeStorage) { }
+  private storage: SecureStorageObject;
+
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController, private secureStorage: SecureStorage) { }
 
   /**
    * Recomendado
@@ -26,17 +28,32 @@ export class M5NoEncryptionPage {
     //Criptografa
     this.readPass = SHA_256(this.password).toString();
 
-    this.nativeStorage.setItem('userData', { email: this.email, password: this.password })
-      .then(
-      () => console.log('Item Salvo!'),
-      error => { console.error('Erro ao salvar item', error); this.showAlert(this.readPass); }
-      );
+    this.secureStorage.create('userData')
+      .then((storage: SecureStorageObject) => {
+        this.storage = storage
 
-    this.nativeStorage.getItem('userData')
-      .then(
-      data => { this.readPass = data.password; this.showAlert(this.readPass); },
-      error => { console.error('Erro ao ler dados'); }
-      );
+        //Registra dados
+        this.storage.set('email', this.email)
+          .then(
+          data => console.log(data), //retorna a chave
+          error => console.log(error)
+          );
+
+        //Registra dados
+        this.storage.set('password', this.readPass)
+          .then(
+          data => console.log(data), //retorna a chave
+          error => this.showAlert(this.readPass)
+          );
+
+
+        //Busca dados - password
+        this.storage.get('password')
+          .then(
+          data => { this.readPass = data; this.showAlert(this.readPass); }, //retorna o valor
+          error => console.log("Não existe dados.")
+          );
+      });
   }
 
   private showAlert(alertText: String) {

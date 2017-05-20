@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 
-//Native Storage
-import { NativeStorage } from '@ionic-native/native-storage';
+//Secure Storage
+import { SecureStorage, SecureStorageObject } from '@ionic-native/secure-storage';
 
 
 @Component({
@@ -16,24 +16,43 @@ export class M2UnsafeDataPage {
   public password: string;
   private readEmail: String = 'Deve Rodar num Device/Simulador';
 
-  constructor(public navCtrl: NavController, private alertCtrl: AlertController, private nativeStorage: NativeStorage) { }
+  private storage: SecureStorageObject;
+
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController, private secureStorage: SecureStorage) { }
 
   /**
    * Recomendado
    */
   public sigin(): void {
 
-    this.nativeStorage.setItem('userData', { email: this.email, password: this.password })
-      .then(
-      () => console.log('Item Salvo!'),
-      error => {console.error('Erro ao salvar item', error); this.showAlert(this.readEmail);}
-      );
+    this.secureStorage.create('userData')
+      .then((storage: SecureStorageObject) => {
+        this.storage = storage
 
-    this.nativeStorage.getItem('userData')
-      .then(
-      data => { this.readEmail = data.email; this.showAlert(this.readEmail); },
-      error => { console.error('Erro ao ler dados'); }
-      );
+        //Registra dados
+        this.storage.set('email', this.email)
+          .then(
+          data => console.log(data), //retorna a chave
+          error => console.log(error)
+          );
+
+        //Registra dados
+        this.storage.set('password', this.password)
+          .then(
+          data => console.log(data), //retorna a chave
+          error => this.showAlert(this.readEmail)
+          );
+
+
+        //Busca dados - email
+        this.storage.get('email')
+          .then(
+          data => { this.readEmail = data; this.showAlert(this.readEmail); }, //retorna o valor
+          error => console.log("Não existe dados.")
+          );
+      });
+
+
   }
 
   private showAlert(alertText: String) {

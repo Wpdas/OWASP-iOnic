@@ -11,7 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { NativeStorage } from '@ionic-native/native-storage';
+import { SecureStorage } from '@ionic-native/secure-storage';
 
 import { SimulatedToken } from "../services/simulated_token/simulated-token.service";
 import { UtilsApp } from "../services/utils/utils.service";
@@ -69,7 +69,7 @@ import { M10ExternalFunctionalityPage } from "../pages/m10-external-functionalit
   providers: [
     StatusBar,
     SplashScreen,
-    NativeStorage,
+    SecureStorage,
     SQLite,
     SimulatedToken,
     UtilsApp,
