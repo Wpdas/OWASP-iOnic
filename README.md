@@ -1,5 +1,8 @@
 Este é um projeto desenvolvido em [Ionic](http://ionicframework.com/).
 
+#### Aplicativo:
+O aplicativo pode ser baixado pelo link interno do Git: [OWASP.apk](https://github.com/Wpdas/SecurityOWASP/blob/master/OWASP.apk).
+
 ## App Security OWASP - Instruções
 
 Este é um projeto que visa utilizar práticas de segurança no desenvolvimento de uma aplicação. 
@@ -31,6 +34,3 @@ numa aplicação instalada em um dispositivo iOS, Android ou Windows Phone.
 | Funcionalidade Externa | [Abrir Prevenção - Print](https://github.com/Wpdas/SecurityOWASP/blob/master/screenshots/FuncionalidadeExterna.png). |
 
 Observação: Todo código do projeto pode ser explorado.
-
-#### Aplicativo:
-O aplicativo pode ser baixado pelo link interno do Git: [OWASP.apk](https://github.com/Wpdas/SecurityOWASP/blob/master/OWASP.apk).
